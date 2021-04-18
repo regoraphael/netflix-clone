@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import MovieRow from './components/MovieRow';
 import FeaturedMovie from './components/FeaturedMovie';
 import Header from './components/Header';
+import netflixLoading from './images/Netflix_LoadTime.gif';
 import './App.css'
 
 const App = () => {
@@ -24,7 +25,6 @@ const App = () => {
     loadAll();
   }, []
   );
-
   useEffect(()=>{
     const scrollListener = () => {
       if(window.scrollY > 10) {
@@ -54,6 +54,14 @@ const App = () => {
           />
         ))}
       </section>
+      <footer>
+        Direitos de imagem para Netflix<br/>
+        Dados extraidos do site Themoviedb.org
+      </footer>
+      { movielist.length <= 0 && 
+      <div id="loading">
+        <img src={netflixLoading} alt="loading" />
+      </div>}
     </div>
   )
 }

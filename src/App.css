@@ -14,3 +14,25 @@ body {
 .lists {
   margin-top: -150px;
 }
+
+footer {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#loading{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+#loading img{
+  height: 100%;
+}
