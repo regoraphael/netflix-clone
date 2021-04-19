@@ -6,7 +6,7 @@ const FeaturedMovie = ({ item }) => {
   const firstDate = new Date(item.first_air_date);
   const genres = [];
   item.genres.forEach((genre) => {
-    genres.push(genre);
+    genres.push(genre.name);
   });
 
   let description = item.overview;
